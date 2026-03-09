@@ -1,0 +1,34 @@
+<Window
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Biblioteca.ViewModels"
+        x:Class="Biblioteca.MainWindowView"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Biblioteca">
+
+        <Window.DataContext>
+                <vm:MainWindowViewModel />
+        </Window.DataContext>
+
+        <DockPanel>
+
+                <!-- Menú superior -->
+                <Menu DockPanel.Dock="Top">
+                        <MenuItem Header="_Archivo">
+                                <MenuItem Header="_Nuevo" Command="{CompiledBinding CrearArticuloCommand}" />
+                                <MenuItem Header="_Exportar CSV" Command="{CompiledBinding ExportarCsvCommand}" />
+                        </MenuItem>
+                </Menu>
+
+                <!-- Buscador -->
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
+                        <TextBox Width="200" Watermark="Buscar..." Text="{CompiledBinding Filtro}" />
+                        <Button Content="Buscar" Command="{CompiledBinding BuscarCommand}" />
+                </StackPanel>
+
+                <!-- Tabla -->
+                <DataGrid ItemsSource="{CompiledBinding Articulos}" AutoGenerateColumns="True"/>
+                
+        </DockPanel>
+
+</Window>

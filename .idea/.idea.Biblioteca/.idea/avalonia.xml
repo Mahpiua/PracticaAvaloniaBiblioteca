@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Biblioteca/App.axaml" value="Biblioteca/Biblioteca.csproj" />
+        <entry key="Biblioteca/MainWindow.axaml" value="Biblioteca/Biblioteca.csproj" />
+        <entry key="Biblioteca/Resources/AppResources.axaml" value="Biblioteca/Biblioteca.csproj" />
+        <entry key="Biblioteca/Resources/AppStyles.axaml" value="Biblioteca/Biblioteca.csproj" />
+        <entry key="Biblioteca/Views/EditarArticuloView.axaml" value="Biblioteca/Biblioteca.csproj" />
+        <entry key="Biblioteca/Views/MainWindowView.axaml" value="Biblioteca/Biblioteca.csproj" />
+        <entry key="Biblioteca/Views/ValoracionesView.axaml" value="Biblioteca/Biblioteca.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

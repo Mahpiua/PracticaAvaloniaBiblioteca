@@ -1,0 +1,37 @@
+﻿<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="Biblioteca.Views.ValoracionesView"
+    Title="Valoraciones"
+    Width="400" Height="400"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:vm="clr-namespace:Biblioteca.ViewModels"
+    d:DataContext="{d:DesignInstance vm:ValoracionesViewModel, IsDesignTimeCreatable=True}"
+    x:DataType="vm:ValoracionesViewModel">
+
+    <StackPanel Margin="10" Spacing="10">
+
+        <TextBlock Text="Valoraciones del artículo" FontWeight="Bold"/>
+
+        <ListBox ItemsSource="{Binding Lista}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Puntuacion}" />
+                        <TextBlock Text="{Binding Comentario}" />
+                        <TextBlock Text="{Binding Fecha}" FontSize="10"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock Text="Nueva valoración:" FontWeight="Bold"/>
+
+        <ComboBox ItemsSource="{Binding Puntuaciones}" SelectedItem="{Binding PuntuacionNueva}" />
+
+        <TextBox Watermark="Comentario" Text="{Binding ComentarioNuevo}" />
+
+        <Button Content="Añadir" Command="{Binding AñadirCommand}" />
+
+    </StackPanel>
+</Window>
